@@ -54,8 +54,8 @@ def readFile(ndjson_file, start, end):
                 break
             if counter >= start:
                 line_name, line_data = parseLine(line)
-                if (counter == [0]):
-                    line_data.save("../images/image{counter}.png")
+                if (0 <= counter <= 10):
+                    line_data.save(f"../data/images/image{counter}.png")
                 names.append(line_name)
                 image_data.append(line_data)
             counter += 1
